@@ -1,5 +1,7 @@
-
+import sys, logging
 from decimal import Decimal
+
+logging.basicConfig(level=logging.INFO)
 
 
 def select_operation():
@@ -10,19 +12,37 @@ def select_operation():
     [4] Dzielenie\n""")
     return output
 
-def addition(numbers):
-    result = 0
-    for number in numbers:
-        result += number
+
+def addition(number_1, number_2):
+    result = number_1 + number_2
+    logging.info(f"Dodaję {number_1} i {number_2}")
+    return result
+
+def subtraction(number_1, number_2):
+    result = number_1 - number_2
+    logging.info(f"Odejmuję {number_2} od {number_1}")
+    return result
+
+def multiplication(number_1, number_2):
+    result = number_1 + number_2
+    logging.info(f"Mnożę {number_1} przez {number_2}")
+    return result
+
+def division(number_1, number_2):
+    result = number_1 + number_2
+    logging.info(f"Dzielę {number_1} przez {number_2}")
     return result
 
 
-def get_numbers():
-    number_1 = Decimal(input("Podaj pierwszą liczbę: "))
-    number_2 = Decimal(input("Podaj drugą liczbę: "))
-    return number_1, number_2
+def perform_calculation(operation):
+    if select_operation() == '1':
+        pass
+    elif select_operation() == '2':
+        pass
+    elif select_operation() == '3':
+        pass
+    elif select_operation() == '4':
+        pass
 
-
-if select_operation() == '1':
-    result = addition(get_numbers())
-    print(f"Twój wynik dodawania wynosi: {result}")
+if __name__ == "__main__":
+    perform_calculation(select_operation())
