@@ -35,13 +35,16 @@ def division(number_1, number_2):
 
 
 def perform_calculation(operation):
-    if select_operation() == '1':
+    number_1 = Decimal(input("Podaj pierwszą liczbę: "))
+    number_2 = Decimal(input("Podaj drugą liczbę: "))
+
+    if operation == '1':
+        addition(number_1, number_2)
+    elif operation == '2':
         pass
-    elif select_operation() == '2':
+    elif operation == '3':
         pass
-    elif select_operation() == '3':
-        pass
-    elif select_operation() == '4':
+    elif operation == '4':
         pass
 
 if __name__ == "__main__":
