@@ -24,14 +24,17 @@ def subtraction(number_1, number_2):
     return result
 
 def multiplication(number_1, number_2):
-    result = number_1 + number_2
+    result = number_1 * number_2
     logging.info(f"Mnożę {number_1} przez {number_2}")
     return result
 
 def division(number_1, number_2):
-    result = number_1 + number_2
+    result = number_1 / number_2
     logging.info(f"Dzielę {number_1} przez {number_2}")
     return result
+
+def print_result(result):
+    print(f"Wynik to {result}")
 
 
 def perform_calculation(operation):
@@ -39,13 +42,13 @@ def perform_calculation(operation):
     number_2 = Decimal(input("Podaj drugą liczbę: "))
 
     if operation == '1':
-        addition(number_1, number_2)
+        print_result(addition(number_1, number_2))
     elif operation == '2':
-        pass
+        print_result(subtraction(number_1, number_2))
     elif operation == '3':
-        pass
+        print_result(multiplication(number_1, number_2))
     elif operation == '4':
-        pass
+       print_result(division(number_1, number_2))
 
 if __name__ == "__main__":
     perform_calculation(select_operation())
