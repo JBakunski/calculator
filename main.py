@@ -38,8 +38,8 @@ def print_result(result):
 
 
 def perform_calculation(operation):
-    number_1 = Decimal(input("Podaj pierwszą liczbę: "))
-    number_2 = Decimal(input("Podaj drugą liczbę: "))   
+    number_1 = int((input("Podaj pierwszą liczbę: ")))
+    number_2 = int((input("Podaj drugą liczbę: ")))
 
     if operation == '1':
         output = addition
