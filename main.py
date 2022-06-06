@@ -1,4 +1,4 @@
-import sys, logging
+import logging
 from decimal import Decimal
 
 logging.basicConfig(level=logging.INFO)
@@ -39,16 +39,18 @@ def print_result(result):
 
 def perform_calculation(operation):
     number_1 = Decimal(input("Podaj pierwszą liczbę: "))
-    number_2 = Decimal(input("Podaj drugą liczbę: "))
+    number_2 = Decimal(input("Podaj drugą liczbę: "))   
 
     if operation == '1':
-        print_result(addition(number_1, number_2))
+        output = addition
     elif operation == '2':
-        print_result(subtraction(number_1, number_2))
+        output = subtraction
     elif operation == '3':
-        print_result(multiplication(number_1, number_2))
+       output = multiplication
     elif operation == '4':
-       print_result(division(number_1, number_2))
+        output = division
+    
+    print_result(output(number_1, number_2))
 
 if __name__ == "__main__":
     perform_calculation(select_operation())
