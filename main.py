@@ -46,7 +46,7 @@ def perform_calculation(operation):
     elif operation == '2':
         output = subtraction
     elif operation == '3':
-       output = multiplication
+        output = multiplication
     elif operation == '4':
         output = division
     
